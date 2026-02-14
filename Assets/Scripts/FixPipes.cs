@@ -12,10 +12,10 @@ public class FixPipes : MonoBehaviour
     {
         if (playerInRange && Keyboard.current.eKey.wasPressedThisFrame)
         {
-            //if (fixedTilemap != null) {
+            if (fixedTilemap != null) {
                 Debug.Log("Trigger");
                 fixedTilemap.enabled = true;
-            //}
+            }
         }
     }
 
