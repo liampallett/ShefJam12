@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 2c6fa7386a3bb43439bb6affcc747b7a
+guid: c4d1456ae4b660d4c85ba918d47c5002
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: -2053989363645956680
     second: pixilart-sprite (1)_0
+  - first:
+      213: -996435834641883867
+    second: pixilart-sprite (1)_1
+  - first:
+      213: -1493032810441443054
+    second: pixilart-sprite (1)_2
+  - first:
+      213: 4089393204286459484
+    second: pixilart-sprite (1)_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 8
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +84,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -101,7 +110,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -116,12 +125,12 @@ TextureImporter:
       name: pixilart-sprite (1)_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 0
-        width: 32
+        width: 26
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -138,20 +147,20 @@ TextureImporter:
       name: pixilart-sprite (1)_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 37
         y: 0
-        width: 32
-        height: 32
+        width: 22
+        height: 31
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 0d3bf782dab8f784d8816b4fc2896475
-      internalID: 803796776
+      spriteID: 52d53b243e2fb22f0800000000000000
+      internalID: -996435834641883867
       vertices: []
       indices: 
       edges: []
@@ -160,20 +169,20 @@ TextureImporter:
       name: pixilart-sprite (1)_2
       rect:
         serializedVersion: 2
-        x: 64
+        x: 71
         y: 0
-        width: 32
-        height: 32
+        width: 19
+        height: 21
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 31a7958bf14b5654db1a285fbf030882
-      internalID: -1392478198
+      spriteID: 21972afb19ea74be0800000000000000
+      internalID: -1493032810441443054
       vertices: []
       indices: 
       edges: []
@@ -182,20 +191,20 @@ TextureImporter:
       name: pixilart-sprite (1)_3
       rect:
         serializedVersion: 2
-        x: 96
+        x: 99
         y: 0
-        width: 32
-        height: 32
+        width: 25
+        height: 21
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e56595f8b20ff164998103cfdfc0c566
-      internalID: 1441064493
+      spriteID: c5e0468e37170c830800000000000000
+      internalID: 4089393204286459484
       vertices: []
       indices: 
       edges: []
@@ -204,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f8cb788697a5a58458419e34abbe7c3a
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -212,14 +221,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
       pixilart-sprite (1)_0: -2053989363645956680
-      pixilart-sprite (1)_1: 803796776
-      pixilart-sprite (1)_2: -1392478198
-      pixilart-sprite (1)_3: 1441064493
+      pixilart-sprite (1)_1: -996435834641883867
+      pixilart-sprite (1)_2: -1493032810441443054
+      pixilart-sprite (1)_3: 4089393204286459484
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
