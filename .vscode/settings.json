@@ -67,5 +67,6 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "ShefJam12.slnx"
+    "dotnet.defaultSolution": "ShefJam12.slnx",
+    "dotnet.preferCSharpExtension": true
 }

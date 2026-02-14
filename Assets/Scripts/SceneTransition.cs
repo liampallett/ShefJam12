@@ -4,17 +4,15 @@ using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Attach this to the Player object.
-/// Press a key to toggle between the current scene and the target scene.
-/// Automatically remembers the previous scene so you can go back.
+/// Press a key to toggle between the current scene and its alternate state.
+/// If the scene ends with "Present", it loads the version without it, and vice versa.
 /// </summary>
 public class SceneTransition : MonoBehaviour
 {
     [Header("Scene Settings")]
-    [SerializeField] private string targetSceneName;
     [SerializeField] private Key transitionKey = Key.Q;
 
     private Keyboard keyboard;
-    private string previousSceneName;
 
     private void Awake()
     {
@@ -25,14 +23,21 @@ public class SceneTransition : MonoBehaviour
     {
         if (keyboard != null && keyboard[transitionKey].wasPressedThisFrame)
         {
-            // Save the current scene name before transitioning
-            previousSceneName = SceneManager.GetActiveScene().name;
+            string currentScene = SceneManager.GetActiveScene().name;
+            string targetScene;
 
-            // Load the target scene
-            SceneManager.LoadScene(targetSceneName);
+            if (currentScene.EndsWith("Present"))
+            {
+                // Remove "Present" from the end
+                targetScene = currentScene.Substring(0, currentScene.Length - "Present".Length);
+            }
+            else
+            {
+                // Add "Present" to the end
+                targetScene = currentScene + "Present";
+            }
 
-            // Swap so pressing the key again brings you back
-            targetSceneName = previousSceneName;
+            SceneManager.LoadScene(targetScene);
         }
     }
 }
