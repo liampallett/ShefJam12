@@ -334,13 +334,67 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 763716626348067712, guid: 5cf9c9ef8ba6c9b42a189eff2adb6374, type: 3}
       insertIndex: -1
       addedObject: {fileID: 340524580}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5931677244736466711, guid: 5cf9c9ef8ba6c9b42a189eff2adb6374, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1384853656}
+    - targetCorrespondingSourceObject: {fileID: 5931677244736466711, guid: 5cf9c9ef8ba6c9b42a189eff2adb6374, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1384853655}
+    - targetCorrespondingSourceObject: {fileID: 5931677244736466711, guid: 5cf9c9ef8ba6c9b42a189eff2adb6374, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1384853654}
   m_SourcePrefab: {fileID: 100100000, guid: 5cf9c9ef8ba6c9b42a189eff2adb6374, type: 3}
+--- !u!1 &814008321 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5931677244736466711, guid: 5cf9c9ef8ba6c9b42a189eff2adb6374, type: 3}
+  m_PrefabInstance: {fileID: 814008320}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1384853653 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 763716626348067712, guid: 5cf9c9ef8ba6c9b42a189eff2adb6374, type: 3}
   m_PrefabInstance: {fileID: 814008320}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1384853654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814008321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f52eafd797ed6da4f8903d70c51e0310, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Inventory
+  maxSlots: 8
+  inventoryUI: {fileID: 5127083345807831709, guid: 71a16b4a0dd491648866a6435e2474a9, type: 3}
+--- !u!114 &1384853655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814008321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96743b11481558146ba3a8f828de893e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneTransition
+  targetSceneName: ShipCorridor
+  transitionKey: 31
+--- !u!114 &1384853656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814008321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc8469023dd27b4dbdaf2207c187bf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerSpawn
 --- !u!1 &1772798597
 GameObject:
   m_ObjectHideFlags: 0
