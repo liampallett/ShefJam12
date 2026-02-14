@@ -4,7 +4,8 @@ using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Attach this to the Player object.
-/// Press a key to transition to another scene, preserving position.
+/// Press a key to toggle between the current scene and the target scene.
+/// Automatically remembers the previous scene so you can go back.
 /// </summary>
 public class SceneTransition : MonoBehaviour
 {
@@ -13,10 +14,7 @@ public class SceneTransition : MonoBehaviour
     [SerializeField] private Key transitionKey = Key.Q;
 
     private Keyboard keyboard;
-
-    // Static so it persists between scene loads
-    private static Vector3 savedPosition;
-    private static bool hasSavedPosition = false;
+    private string previousSceneName;
 
     private void Awake()
     {
@@ -27,26 +25,14 @@ public class SceneTransition : MonoBehaviour
     {
         if (keyboard != null && keyboard[transitionKey].wasPressedThisFrame)
         {
-            // Save the player's current position
-            savedPosition = transform.position;
-            hasSavedPosition = true;
+            // Save the current scene name before transitioning
+            previousSceneName = SceneManager.GetActiveScene().name;
 
             // Load the target scene
             SceneManager.LoadScene(targetSceneName);
-        }
-    }
 
-    /// <summary>
-    /// Call this from PlayerSpawn to get the saved position.
-    /// </summary>
-    public static bool TryGetSavedPosition(out Vector3 position)
-    {
-        position = savedPosition;
-        if (hasSavedPosition)
-        {
-            hasSavedPosition = false;
-            return true;
+            // Swap so pressing the key again brings you back
+            targetSceneName = previousSceneName;
         }
-        return false;
     }
 }
