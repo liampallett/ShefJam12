@@ -136,8 +136,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c51ffe59186c2c8439b3c4c68f723674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnPlayer
---- !u!114 &191748087
-MonoBehaviour:
+--- !u!82 &191748088
+AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Volume: 0.75
   m_Pitch: 1
   Loop: 1
-  Mute: 1
+  Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -233,7 +233,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!82 &191748088
+--- !u!82 &191748089
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -248,7 +248,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -350,6 +350,18 @@ MonoBehaviour:
   interactKeyUI: {fileID: 2072132510}
   pastKey: {fileID: 1312964004}
   presentKey: {fileID: 323228028}
+--- !u!114 &191748099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191748067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5384c645893873c409426cfd7b1ddd0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickedUpItemCleaner
 --- !u!1 &323228026
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,7 +1048,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1069084386694979077, guid: 5cf9c9ef8ba6c9b42a189eff2adb6374, type: 3}
       propertyPath: jumpForce
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1069084386694979077, guid: 5cf9c9ef8ba6c9b42a189eff2adb6374, type: 3}
       propertyPath: groundCheck
@@ -1091,17 +1103,16 @@ PrefabInstance:
       addedObject: {fileID: 191748077}
     - targetCorrespondingSourceObject: {fileID: 5931677244736466711, guid: 5cf9c9ef8ba6c9b42a189eff2adb6374, type: 3}
       insertIndex: -1
-<<<<<<< HEAD
-      addedObject: {fileID: 191748078}
-    - targetCorrespondingSourceObject: {fileID: 5931677244736466711, guid: 5cf9c9ef8ba6c9b42a189eff2adb6374, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 191748088}
     - targetCorrespondingSourceObject: {fileID: 5931677244736466711, guid: 5cf9c9ef8ba6c9b42a189eff2adb6374, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 191748089}
+    - targetCorrespondingSourceObject: {fileID: 5931677244736466711, guid: 5cf9c9ef8ba6c9b42a189eff2adb6374, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 191748098}
-=======
-      addedObject: {fileID: 191748087}
->>>>>>> d0f6799bf7a1e039dc4f4df1b26af63d9971edc2
+    - targetCorrespondingSourceObject: {fileID: 5931677244736466711, guid: 5cf9c9ef8ba6c9b42a189eff2adb6374, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 191748099}
   m_SourcePrefab: {fileID: 100100000, guid: 5cf9c9ef8ba6c9b42a189eff2adb6374, type: 3}
 --- !u!1 &916297841
 GameObject:
