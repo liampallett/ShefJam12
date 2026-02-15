@@ -14,9 +14,15 @@ public class SceneTransition : MonoBehaviour
     private Keyboard keyboard;
     public static bool isInPast;
 
+    AudioSource pastOST;
+    AudioSource presentOST;
+
     private void Awake()
     {
         keyboard = Keyboard.current;
+        AudioSource[] osts = this.GetComponents<AudioSource>();
+        pastOST = osts[0];
+        presentOST = osts[1];
     }
 
     private void Update()
@@ -30,11 +36,15 @@ public class SceneTransition : MonoBehaviour
             {
                 targetScene = currentScene.Substring(0, currentScene.Length - "Present".Length) + "Past";
                 isInPast = true;
+                pastOST.mute = false;
+                presentOST.mute = true;
             }
             else if (currentScene.EndsWith("Past"))
             {
                 targetScene = currentScene.Substring(0, currentScene.Length - "Past".Length) + "Present";
                 isInPast = false;
+                pastOST.mute = true;
+                presentOST.mute = false;
             }
             else
             {
