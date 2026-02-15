@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScenePresent.unity
     guid: 3e69ed3cbb9a692488e42ed84b14e1e0
   - enabled: 1
-    path: Assets/Scenes/ChickenRoom.unity
+    path: Assets/Scenes/ChickenRoomPast.unity
     guid: 09b522b2f2f1018498c7c9b6c5e9d6a4
   - enabled: 1
     path: Assets/Scenes/CoralRoomPresent.unity
