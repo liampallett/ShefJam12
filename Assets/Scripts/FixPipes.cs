@@ -1,4 +1,5 @@
 using NUnit.Framework.Constraints;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Tilemaps;
@@ -8,6 +9,7 @@ public class FixPipes : MonoBehaviour
     public TilemapRenderer fixedTilemap;
     public GameObject oilDrop;
     private bool playerInRange = false;
+    public static bool coralFixed = false;
 
     void Update()
     {
@@ -16,6 +18,7 @@ public class FixPipes : MonoBehaviour
             if (fixedTilemap != null) {
                 Debug.Log("Trigger");
                 fixedTilemap.enabled = true;
+                coralFixed = true;
                 oilDrop.SetActive(false);
             }
         }
