@@ -4,11 +4,25 @@ using UnityEngine.UI;
 public class interactUI : MonoBehaviour
 {
     public Image interactKeyUI;
+    public Image pastKey;
+    public Image presentKey;
 
     void Start()
     {
         if (interactKeyUI != null) {
             interactKeyUI.enabled = false;
+        }
+    }
+
+    void Update()
+    {
+        bool isInPast = SceneTransition.isInPast;
+        if (isInPast) {
+            pastKey.enabled = true;
+            presentKey.enabled = false;
+        } else {
+            pastKey.enabled = false;
+            presentKey.enabled = true;
         }
     }
 

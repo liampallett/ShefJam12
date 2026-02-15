@@ -1,3 +1,4 @@
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -11,6 +12,7 @@ public class SceneTransition : MonoBehaviour
     [SerializeField] private Key transitionKey = Key.Q;
 
     private Keyboard keyboard;
+    public static bool isInPast;
 
     private void Awake()
     {
@@ -27,10 +29,12 @@ public class SceneTransition : MonoBehaviour
             if (currentScene.EndsWith("Present"))
             {
                 targetScene = currentScene.Substring(0, currentScene.Length - "Present".Length) + "Past";
+                isInPast = true;
             }
             else if (currentScene.EndsWith("Past"))
             {
                 targetScene = currentScene.Substring(0, currentScene.Length - "Past".Length) + "Present";
+                isInPast = false;
             }
             else
             {
