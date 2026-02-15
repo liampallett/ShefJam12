@@ -8,8 +8,8 @@ public class WorldState : MonoBehaviour
 {
     private static WorldState instance;
 
-    // Stores which objects have been changed, keyed by a unique ID
-    private Dictionary<string, bool> changedObjects = new Dictionary<string, bool>();
+    // Stores which objects have been changed
+    private static Dictionary<string, bool> changedObjects = new Dictionary<string, bool>();
 
     private void Awake()
     {
@@ -25,12 +25,12 @@ public class WorldState : MonoBehaviour
     /// Mark an object as changed.
     public static void SetChanged(string objectId)
     {
-        instance.changedObjects[objectId] = true;
+        changedObjects[objectId] = true;
     }
 
     /// Check if an object has been changed.
     public static bool IsChanged(string objectId)
     {
-        return instance.changedObjects.ContainsKey(objectId) && instance.changedObjects[objectId];
+        return changedObjects.ContainsKey(objectId) && changedObjects[objectId];
     }
 }

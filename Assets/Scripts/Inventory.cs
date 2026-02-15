@@ -1,7 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 /// <summary>
-/// Attach this to the Player
+/// Handles picking up items and modifying UI
+/// Tracks picked up items so they don't respawn later
 /// </summary>
 public class Inventory : MonoBehaviour
 {
@@ -27,6 +30,10 @@ public class Inventory : MonoBehaviour
         {
             items.Add(item.ItemData);
             Debug.Log("Picked up: " + item.ItemData.itemName);
+
+            // Mark as picked up so it doesn't respawn
+            string itemId = SceneManager.GetActiveScene().name + "_" + other.gameObject.name;
+            WorldState.SetChanged(itemId);
 
             // Update the on-screen inventory display
             var ui = GetInventoryUI();

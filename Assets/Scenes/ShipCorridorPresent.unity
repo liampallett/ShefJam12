@@ -608,7 +608,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5931677244736466711, guid: 5cf9c9ef8ba6c9b42a189eff2adb6374, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 929525905}
   m_SourcePrefab: {fileID: 100100000, guid: 5cf9c9ef8ba6c9b42a189eff2adb6374, type: 3}
 --- !u!1 &916297841
 GameObject:
@@ -704,6 +707,23 @@ Transform:
   - {fileID: 1434789355}
   m_Father: {fileID: 1504380945}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &929525895 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5931677244736466711, guid: 5cf9c9ef8ba6c9b42a189eff2adb6374, type: 3}
+  m_PrefabInstance: {fileID: 814008320}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &929525905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929525895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5384c645893873c409426cfd7b1ddd0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickedUpItemCleaner
 --- !u!1 &934192372
 GameObject:
   m_ObjectHideFlags: 0
