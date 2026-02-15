@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 /// <summary>
 /// Handles picking up items and modifying UI
@@ -50,6 +51,26 @@ public class Inventory : MonoBehaviour
     public List<InventoryItem> GetItems() => items;
 
     public bool HasItem(string itemName) => items.Exists(i => i.itemName == itemName);
+
+    public bool AddItem(string itemName)
+    {
+        InventoryItem item = Resources.Load<InventoryItem>(itemName);
+        if (item == null)
+        {
+            Debug.LogError("Item not found in Resources: " + itemName);
+            return false;
+        }
+
+        if (items.Count >= maxSlots)
+        {
+            Debug.Log("Inventory is full");
+            return false;
+        }
+
+        items.Add(item);
+        GetInventoryUI()?.UpdateUI(items);
+        return true;
+    }
 
     public void RemoveItem(string itemName)
     {

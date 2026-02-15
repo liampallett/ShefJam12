@@ -136,8 +136,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c51ffe59186c2c8439b3c4c68f723674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnPlayer
---- !u!82 &191748078
-AudioSource:
+--- !u!114 &191748087
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -149,9 +149,9 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 916b829a2876a3a41b6197b426c787e2, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
@@ -246,9 +246,9 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 62c04cf7dd2a85e4b9dbc879cbe99252, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.8
+  m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1091,6 +1091,7 @@ PrefabInstance:
       addedObject: {fileID: 191748077}
     - targetCorrespondingSourceObject: {fileID: 5931677244736466711, guid: 5cf9c9ef8ba6c9b42a189eff2adb6374, type: 3}
       insertIndex: -1
+<<<<<<< HEAD
       addedObject: {fileID: 191748078}
     - targetCorrespondingSourceObject: {fileID: 5931677244736466711, guid: 5cf9c9ef8ba6c9b42a189eff2adb6374, type: 3}
       insertIndex: -1
@@ -1098,6 +1099,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5931677244736466711, guid: 5cf9c9ef8ba6c9b42a189eff2adb6374, type: 3}
       insertIndex: -1
       addedObject: {fileID: 191748098}
+=======
+      addedObject: {fileID: 191748087}
+>>>>>>> d0f6799bf7a1e039dc4f4df1b26af63d9971edc2
   m_SourcePrefab: {fileID: 100100000, guid: 5cf9c9ef8ba6c9b42a189eff2adb6374, type: 3}
 --- !u!1 &916297841
 GameObject:
