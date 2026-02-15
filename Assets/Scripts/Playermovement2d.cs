@@ -2,9 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 /// <summary>
-/// Simple 2D character walking controller using the new Input System.
-/// Attach this to a GameObject with a Rigidbody2D and a 2D collider.
-/// Optionally requires an Animator for walk/idle animations.
+/// Simple 2D character walking controller
 /// </summary>
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement2D : MonoBehaviour
@@ -32,7 +30,7 @@ public class PlayerMovement2D : MonoBehaviour
     private InputAction moveAction;
     private InputAction jumpAction;
 
-    // Animator parameter name hashes (faster than string lookups)
+    // Animator parameter name hashes
     private static readonly int AnimSpeed = Animator.StringToHash("Speed");
     private static readonly int AnimIsGrounded = Animator.StringToHash("IsGrounded");
     private static readonly int AnimJump = Animator.StringToHash("Jump");
@@ -49,27 +47,27 @@ public class PlayerMovement2D : MonoBehaviour
 
     private void Update()
     {
-        // --- Input ---
+        // Input
         horizontalInput = moveAction.ReadValue<Vector2>().x;
 
-        // --- Ground Check ---
+        // Ground Check
         if (groundCheck != null)
         {
             isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
         }
 
-        // --- Jump ---
+        // Jump
         if (jumpAction.WasPressedThisFrame() && isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             animator?.SetTrigger(AnimJump);
         }
 
-        // --- Flip Sprite ---
+        // Flip Sprite
         if (horizontalInput > 0 && !isFacingRight) Flip();
         else if (horizontalInput < 0 && isFacingRight) Flip();
 
-        // --- Update Animator ---
+        // Update Animator
         if (animator != null)
         {
             animator.SetFloat(AnimSpeed, Mathf.Abs(horizontalInput));
@@ -79,7 +77,7 @@ public class PlayerMovement2D : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // --- Horizontal Movement with Smoothing ---
+        // Horizontal Movement with Smoothing
         float targetSpeed = horizontalInput * moveSpeed;
         float speedDifference = targetSpeed - rb.linearVelocity.x;
         float rate = Mathf.Abs(targetSpeed) > 0.01f ? acceleration : deceleration;

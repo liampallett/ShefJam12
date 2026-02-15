@@ -1,9 +1,7 @@
 using UnityEngine;
 
 /// <summary>
-/// Attach this to the Player object.
-/// Keeps the Player (and all its components/children) alive across scene loads.
-/// Ensures only one Player ever exists.
+/// Keeps the Player (and all its components/children) alive across scene loads
 /// </summary>
 public class PersistentPlayer : MonoBehaviour
 {
@@ -11,7 +9,7 @@ public class PersistentPlayer : MonoBehaviour
 
     private void Awake()
     {
-        // If a Player already exists from a previous scene, destroy this duSplicate
+        // If a Player already exists from a previous scene, destroy it
         if (instance != null && instance != this)
         {
             Destroy(gameObject);

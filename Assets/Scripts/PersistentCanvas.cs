@@ -1,9 +1,7 @@
 using UnityEngine;
 
 /// <summary>
-/// Attach this to the Canvas object.
-/// Keeps the Canvas (and all its UI children) alive across scene loads.
-/// Ensures only one Canvas ever exists.
+/// Keeps the Canvas (and all its UI children) alive across scene loads
 /// </summary>
 public class PersistentCanvas : MonoBehaviour
 {
@@ -11,6 +9,7 @@ public class PersistentCanvas : MonoBehaviour
 
     private void Awake()
     {
+        // If a Canvas already exists from a previous scene, destroy it
         if (instance != null && instance != this)
         {
             Destroy(gameObject);

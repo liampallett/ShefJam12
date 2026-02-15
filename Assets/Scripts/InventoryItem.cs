@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 
 /// <summary>
-/// ScriptableObject that defines an item type.
-/// Create new items in the Project panel: Right-click → Inventory → New Item.
+/// ScriptableObject that defines an item type
 /// </summary>
 [CreateAssetMenu(fileName = "NewItem", menuName = "Inventory/New Item")]
 public class InventoryItem : ScriptableObject

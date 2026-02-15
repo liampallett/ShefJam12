@@ -1,9 +1,7 @@
 using UnityEngine;
 
 /// <summary>
-/// Attach this to an object in the PRESENT scene.
-/// On scene load, checks WorldState and swaps the sprite if the
-/// matching object was changed in the past.
+/// Attach this to an object in the PRESENT scene
 /// </summary>
 public class PresentObject : MonoBehaviour
 {

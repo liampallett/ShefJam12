@@ -2,8 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Tracks which objects have been changed by item usage.
-/// Persists across scenes. Attach to the Player object.
+/// Tracks which objects have been changed by item usage
 /// </summary>
 public class WorldState : MonoBehaviour
 {
@@ -23,17 +22,13 @@ public class WorldState : MonoBehaviour
         instance = this;
     }
 
-    /// <summary>
     /// Mark an object as changed.
-    /// </summary>
     public static void SetChanged(string objectId)
     {
         instance.changedObjects[objectId] = true;
     }
 
-    /// <summary>
     /// Check if an object has been changed.
-    /// </summary>
     public static bool IsChanged(string objectId)
     {
         return instance.changedObjects.ContainsKey(objectId) && instance.changedObjects[objectId];

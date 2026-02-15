@@ -2,9 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 /// <summary>
-/// Attach this to an object in the PAST scene that the player can use an item on.
-/// When the player is nearby and presses the use key, it consumes the required item
-/// and marks the object as changed in WorldState.
+/// Attach this to an object in the PAST scene that the player can use an item on
 /// </summary>
 public class ItemReceiver : MonoBehaviour
 {

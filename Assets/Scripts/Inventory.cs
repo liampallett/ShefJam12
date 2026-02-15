@@ -1,10 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Progress;
-
 /// <summary>
-/// Attach this to the Player object.
-/// Handles picking up items and notifying the UI.
+/// Attach this to the Player
 /// </summary>
 public class Inventory : MonoBehaviour
 {
@@ -13,9 +10,17 @@ public class Inventory : MonoBehaviour
 
     private List<InventoryItem> items = new List<InventoryItem>();
 
+    private InventoryUI GetInventoryUI()
+    {
+        if (inventoryUI == null)
+        {
+            inventoryUI = FindAnyObjectByType<InventoryUI>();
+        }
+        return inventoryUI;
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Try to get the Item component from whatever we touched
         Item item = other.GetComponent<Item>();
 
         if (item != null && items.Count < maxSlots)
@@ -24,9 +29,10 @@ public class Inventory : MonoBehaviour
             Debug.Log("Picked up: " + item.ItemData.itemName);
 
             // Update the on-screen inventory display
-            if (inventoryUI != null)
+            var ui = GetInventoryUI();
+            if (ui != null)
             {
-                inventoryUI.UpdateUI(items);
+                ui.UpdateUI(items);
             }
 
             // Remove the item from the scene
@@ -44,7 +50,7 @@ public class Inventory : MonoBehaviour
         if (found != null)
         {
             items.Remove(found);
-            inventoryUI?.UpdateUI(items);
+            GetInventoryUI()?.UpdateUI(items);
         }
     }
 }

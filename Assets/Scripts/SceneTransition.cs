@@ -3,9 +3,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 /// <summary>
-/// Attach this to the Player object.
 /// Press a key to toggle between past and present versions of the current room.
-/// Player position is preserved when switching between states.
 /// </summary>
 public class SceneTransition : MonoBehaviour
 {

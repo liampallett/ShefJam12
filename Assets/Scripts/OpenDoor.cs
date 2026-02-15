@@ -9,7 +9,7 @@ public class Door : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("update");
+        ///Debug.Log("update");
         if (playerInRange && Keyboard.current.eKey.wasPressedThisFrame)
         {
             Debug.Log("load scene");
