@@ -4,8 +4,8 @@ using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Attach this to the Player object.
-/// Press a key to toggle between the current scene and its alternate state.
-/// If the scene ends with "Present", it loads the version without it, and vice versa.
+/// Press a key to toggle between past and present versions of the current room.
+/// Player position is preserved when switching between states.
 /// </summary>
 public class SceneTransition : MonoBehaviour
 {
@@ -28,16 +28,30 @@ public class SceneTransition : MonoBehaviour
 
             if (currentScene.EndsWith("Present"))
             {
-                // Remove "Present" from the end
-                targetScene = currentScene.Substring(0, currentScene.Length - "Present".Length);
+                targetScene = currentScene.Substring(0, currentScene.Length - "Present".Length) + "Past";
+            }
+            else if (currentScene.EndsWith("Past"))
+            {
+                targetScene = currentScene.Substring(0, currentScene.Length - "Past".Length) + "Present";
             }
             else
             {
-                // Add "Present" to the end
-                targetScene = currentScene + "Present";
+                Debug.LogWarning("Scene name '" + currentScene + "' does not end with 'Present' or 'Past'");
+                return;
             }
 
+            // Save position before transitioning
+            Vector3 savedPosition = transform.position;
+
             SceneManager.LoadScene(targetScene);
+
+            SceneManager.sceneLoaded += OnSceneLoaded;
+
+            void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+            {
+                transform.position = savedPosition;
+                SceneManager.sceneLoaded -= OnSceneLoaded;
+            }
         }
     }
 }

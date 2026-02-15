@@ -29,14 +29,16 @@ public class InventoryUI : MonoBehaviour
         foreach (var item in items)
         {
             GameObject slot = Instantiate(slotPrefab, slotParent);
+            slot.SetActive(true);
             slotInstances.Add(slot);
 
-            // Set the icon
-            Image icon = slot.transform.Find("Icon").GetComponent<Image>();
-            if (icon != null && item.icon != null)
+            // Get the SlotUI component and set the icon
+            SlotUI slotUI = slot.GetComponent<SlotUI>();
+            if (slotUI != null && slotUI.iconImage != null && item.icon != null)
             {
-                icon.sprite = item.icon;
-                icon.enabled = true;
+                slotUI.iconImage.sprite = item.icon;
+                slotUI.iconImage.color = Color.white;
+                slotUI.iconImage.enabled = true;
             }
         }
     }
