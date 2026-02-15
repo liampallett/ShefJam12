@@ -12,7 +12,7 @@ public class SceneTransition : MonoBehaviour
     [SerializeField] private Key transitionKey = Key.Q;
 
     private Keyboard keyboard;
-    public static bool isInPast;
+    public static bool isInPast; // bool
 
     AudioSource pastOST;
     AudioSource presentOST;
