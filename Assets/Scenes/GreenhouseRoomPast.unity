@@ -213,7 +213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemReceiver
   objectId: corn1
-  requiredItemName: Watering Can (Full)
+  requiredItemName: WateringCanFull
   removeItem: 0
   useKey: 19
   changedSprite: {fileID: 0}
@@ -1428,6 +1428,7 @@ GameObject:
   - component: {fileID: 1210621450}
   - component: {fileID: 1210621449}
   - component: {fileID: 1210621448}
+  - component: {fileID: 1210621451}
   m_Layer: 0
   m_Name: HealthySunflower
   m_TagString: Untagged
@@ -1448,7 +1449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemReceiver
   objectId: sunflower
-  requiredItemName: Watering Can (Full)
+  requiredItemName: WateringCanFull
   removeItem: 0
   useKey: 19
   changedSprite: {fileID: 0}
@@ -1526,6 +1527,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 615555950}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1210621451
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210621447}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.8125, y: 1}
+    newSize: {x: 0.8125, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.8125, y: 1}
+  m_EdgeRadius: 0
 --- !u!1001 &1340304221
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1656,6 +1703,7 @@ GameObject:
   - component: {fileID: 1955264666}
   - component: {fileID: 1955264665}
   - component: {fileID: 1955264664}
+  - component: {fileID: 1955264667}
   m_Layer: 0
   m_Name: HealthyCorn2
   m_TagString: Untagged
@@ -1676,7 +1724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemReceiver
   objectId: corn2
-  requiredItemName: Watering Can (Full)
+  requiredItemName: WateringCanFull
   removeItem: 0
   useKey: 19
   changedSprite: {fileID: 0}
@@ -1754,6 +1802,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 615555950}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1955264667
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955264663}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.90625, y: 1}
+    newSize: {x: 0.90625, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.90625, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1972053439
 GameObject:
   m_ObjectHideFlags: 0
@@ -1765,6 +1859,7 @@ GameObject:
   - component: {fileID: 1972053442}
   - component: {fileID: 1972053441}
   - component: {fileID: 1972053440}
+  - component: {fileID: 1972053443}
   m_Layer: 0
   m_Name: HealthyRose
   m_TagString: Untagged
@@ -1785,7 +1880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemReceiver
   objectId: rose
-  requiredItemName: Watering Can (Full)
+  requiredItemName: WateringCanFull
   removeItem: 0
   useKey: 19
   changedSprite: {fileID: 0}
@@ -1863,6 +1958,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 615555950}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1972053443
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972053439}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.59375, y: 0.65625}
+    newSize: {x: 0.59375, y: 0.65625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.59375, y: 0.65625}
+  m_EdgeRadius: 0
 --- !u!1 &2022487306
 GameObject:
   m_ObjectHideFlags: 0
@@ -2027,6 +2168,7 @@ GameObject:
   - component: {fileID: 2099221501}
   - component: {fileID: 2099221500}
   - component: {fileID: 2099221499}
+  - component: {fileID: 2099221502}
   m_Layer: 0
   m_Name: HealthyCorn3
   m_TagString: Untagged
@@ -2047,7 +2189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemReceiver
   objectId: corn3
-  requiredItemName: Watering Can (Full)
+  requiredItemName: WateringCanFull
   removeItem: 0
   useKey: 19
   changedSprite: {fileID: 0}
@@ -2125,6 +2267,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 615555950}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &2099221502
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099221498}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.90625, y: 1}
+    newSize: {x: 0.90625, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.90625, y: 1}
+  m_EdgeRadius: 0
 --- !u!1001 &2105660842
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2204,6 +2392,7 @@ GameObject:
   - component: {fileID: 2140065789}
   - component: {fileID: 2140065788}
   - component: {fileID: 2140065787}
+  - component: {fileID: 2140065790}
   m_Layer: 0
   m_Name: HealthyCorn4
   m_TagString: Untagged
@@ -2224,7 +2413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemReceiver
   objectId: corn4
-  requiredItemName: Watering Can (Full)
+  requiredItemName: WateringCanFull
   removeItem: 0
   useKey: 19
   changedSprite: {fileID: 0}
@@ -2302,6 +2491,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 615555950}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &2140065790
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140065786}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.90625, y: 1}
+    newSize: {x: 0.90625, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.90625, y: 1}
+  m_EdgeRadius: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

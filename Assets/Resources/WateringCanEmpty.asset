@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f813ac3ab699d042b2fd85e14fc7d04, type: 3}
   m_Name: WateringCanEmpty
   m_EditorClassIdentifier: Assembly-CSharp::InventoryItem
-  itemName: Watering Can (Empty)
+  itemName: WateringCanEmpty
   icon: {fileID: 2688690046039215365, guid: ffb6458ae71ea9447a4703d25389c8de, type: 3}
   description: 'An empty watering can
 

@@ -340,7 +340,6 @@ GameObject:
   - component: {fileID: 666538748}
   - component: {fileID: 666538750}
   - component: {fileID: 666538749}
-  - component: {fileID: 666538751}
   m_Layer: 0
   m_Name: Water
   m_TagString: Untagged
@@ -1081,21 +1080,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &666538751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 666538747}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f1d2e166e486454ca228ce93f6de783, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FillUpWateringCan
-  requiredItemName: Watering Can (Empty)
-  receivedItemName: Watering Can (Full)
-  useKey: 19
 --- !u!1 &715079960
 GameObject:
   m_ObjectHideFlags: 0
@@ -3318,8 +3302,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f1d2e166e486454ca228ce93f6de783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FillUpWateringCan
-  requiredItemName: Watering Can (Empty)
-  receivedItemName: Watering Can (Full)
+  requiredItemName: WateringCanEmpty
+  receivedItemName: WateringCanFull
   useKey: 19
 --- !u!61 &1666104795
 BoxCollider2D:

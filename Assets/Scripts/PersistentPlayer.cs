@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Keeps the Player (and all its components/children) alive across scene loads
@@ -9,7 +10,6 @@ public class PersistentPlayer : MonoBehaviour
 
     private void Awake()
     {
-        // If a Player already exists from a previous scene, destroy it
         if (instance != null && instance != this)
         {
             Destroy(gameObject);
@@ -18,5 +18,24 @@ public class PersistentPlayer : MonoBehaviour
 
         instance = this;
         DontDestroyOnLoad(gameObject);
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "WinScreen")
+        {
+            instance = null;
+            Destroy(gameObject);
+        }
     }
 }

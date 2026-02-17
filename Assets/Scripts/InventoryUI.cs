@@ -2,9 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Manages the on-screen inventory display.
-/// Attach this to the InventoryPanel GameObject in your Canvas.
-/// Place your Slot prefab in Assets/Resources and name it "Slot".
+/// Manages the on-screen inventory display
 /// </summary>
 public class InventoryUI : MonoBehaviour
 {

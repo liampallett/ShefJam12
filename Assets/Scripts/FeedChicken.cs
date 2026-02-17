@@ -1,26 +1,21 @@
-using NUnit.Framework;
-using NUnit.Framework.Constraints;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Tilemaps;
 
 public class FeedChicken : MonoBehaviour
 {
     private bool playerInRange = false;
     public static bool chickensFed = false;
-
     private Inventory playerInventory;
 
     void Update()
     {
         if (playerInRange && Keyboard.current.eKey.wasPressedThisFrame)
         {
-            if (playerInventory != null && playerInventory.HasItem("corn"))
+            if (playerInventory != null && playerInventory.HasItem("Corn"))
             {
-                Debug.Log("Trigger");
+                Debug.Log("Fed the chickens!");
                 chickensFed = true;
-                playerInventory.RemoveItem("corn");
+                playerInventory.RemoveItem("Corn");
             }
         }
     }
@@ -28,9 +23,7 @@ public class FeedChicken : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         Inventory inventory = other.GetComponent<Inventory>();
-
-        Debug.Log("Triggered by: " + other.name + ", tag: " + other.tag);
-        if (other.CompareTag("Player"))
+        if (inventory != null)
         {
             playerInRange = true;
             playerInventory = inventory;
@@ -39,9 +32,10 @@ public class FeedChicken : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.GetComponent<Inventory>() != null)
         {
             playerInRange = false;
+            playerInventory = null;
         }
     }
 }

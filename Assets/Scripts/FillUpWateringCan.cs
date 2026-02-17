@@ -21,13 +21,8 @@ public class FillUpWateringCan : MonoBehaviour
         keyboard = Keyboard.current;
     }
 
-    void Update() {
-
-        if (hasBeenUsed)
-        {
-            Debug.Log("You have already done that!");
-            return;
-        }
+    void Update()
+    {
 
         if (FixPipes.coralFixed)
         {
@@ -35,10 +30,16 @@ public class FillUpWateringCan : MonoBehaviour
             {
                 if (playerInventory.HasItem(requiredItemName))
                 {
-                    // Remove the item from inventory
-                    playerInventory.RemoveItem(requiredItemName);
+                    if (hasBeenUsed)
+                    {
+                        Debug.Log("You have already done that!");
+                        return;
+                    }
 
-                    // Give new item
+                    // Remove the item from inventory (skip UI update)
+                    playerInventory.RemoveItem(requiredItemName, false);
+
+                    // Give new item (this triggers the UI update)
                     playerInventory.AddItem(receivedItemName);
 
                     hasBeenUsed = true;
@@ -48,7 +49,7 @@ public class FillUpWateringCan : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("You don't have the required item: " + requiredItemName);
+                    Debug.Log("You don't have " + requiredItemName);
                 }
             }
         }

@@ -52,7 +52,7 @@ public class Inventory : MonoBehaviour
 
     public bool HasItem(string itemName) => items.Exists(i => i.itemName == itemName);
 
-    public bool AddItem(string itemName)
+    public bool AddItem(string itemName, bool updateUI = true)
     {
         InventoryItem item = Resources.Load<InventoryItem>(itemName);
         if (item == null)
@@ -68,17 +68,23 @@ public class Inventory : MonoBehaviour
         }
 
         items.Add(item);
-        GetInventoryUI()?.UpdateUI(items);
+        if (updateUI)
+        {
+            GetInventoryUI()?.UpdateUI(items);
+        }
         return true;
     }
 
-    public void RemoveItem(string itemName)
+    public void RemoveItem(string itemName, bool updateUI = true)
     {
         InventoryItem found = items.Find(i => i.itemName == itemName);
         if (found != null)
         {
             items.Remove(found);
-            GetInventoryUI()?.UpdateUI(items);
+            if (updateUI)
+            {
+                GetInventoryUI()?.UpdateUI(items);
+            }
         }
     }
 }

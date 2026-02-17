@@ -26,7 +26,7 @@ public class FixPipes : MonoBehaviour
         {
             if (playerInventory != null && playerInventory.HasItem("spanner")) {
                 if (fixedTilemap != null) {
-                    Debug.Log("Trigger");
+                    Debug.Log("Fixed the pipes!");
                     fixedTilemap.enabled = true;
                     coralFixed = true;
                     oilDrop.SetActive(false);
@@ -48,8 +48,6 @@ public class FixPipes : MonoBehaviour
     {
         Inventory inventory = other.GetComponent<Inventory>();
 
-        Debug.Log("Trigger");
-        Debug.Log("Triggered by: " + other.name + ", tag: " + other.tag);
         if (other.CompareTag("Player"))
         {
             playerInRange = true;
